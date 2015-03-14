@@ -39,6 +39,28 @@ public void draw() {
 	}
 ```
 
+## How to draw a queen
+
+```java
+public void draw() {
+		int x = getX() * Board.SCALE, 
+			y = getY() * Board.SCALE, 
+			s = Board.SCALE;
+
+		Zen.setColor(getColor());
+		
+		Zen.fillPolygon(
+			new int[] { x + s / 6, x + s / 4, x + s * 3 / 4,
+				x + s * 5 / 6 , x + s * 2 / 3, x + s / 2,
+				x + s / 3}, 
+			new int[] { y + s / 6, y + s * 3 / 4, y + s * 3 / 4,
+				y + s / 6, y + s / 2, y + s / 4,
+				y + s / 2}
+		);
+		
+	}
+```
+
 ## How to draw a knight (hardcore)
 
 ```java
