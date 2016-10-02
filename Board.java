@@ -1,10 +1,11 @@
 
+//library we use for drawing our stuff
 import zen.core.Zen;
 
 public class Board {
 	private Piece[][] board;
 	private Move[][] highlight;
-
+         
 	public static final int SCALE = 90;
 	public static final String BLACK_COLOR = "black";
 	public static final String WHITE_COLOR = "white";
@@ -12,7 +13,7 @@ public class Board {
 	public static final String WHITE_SQUARE = "tan";
 	public static final String HIGHLIGHT_SQUARE = "light gray";
 	public static final String HIGHLIGHT_SQUARE_BORDER = "gray";
-
+	
 	static int currentPlayer = Chess.WHITE;
 
 
