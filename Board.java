@@ -52,9 +52,11 @@ public class Board {
 				if (highlight[x][y] != null) {
 					Zen.setColor(HIGHLIGHT_SQUARE_BORDER);
 				}
+				//colors all the right squares white
 				else if (x % 2 == y % 2) {
 					Zen.setColor(WHITE_SQUARE);
 				}
+				//colors the black squares black
 				else {
 					Zen.setColor(BLACK_SQUARE);
 				}
@@ -103,11 +105,11 @@ public class Board {
 	public int getCurrentPlayer() {
 		return currentPlayer;
 	}
-
+	//checks to see if the square is empty
 	public boolean isEmpty(int x, int y) {
 		return isValid(x, y) && board[x][y] == null;
 	}
-
+	//checks to see if a square is valid i.e. it is on the board
 	public boolean isValid(int x, int y) {
 		return x >= 0 && x < 8 && y >= 0 && y < 8;
 	}
@@ -115,7 +117,7 @@ public class Board {
 	public boolean isHighlighted(int x, int y) {
 		return highlight[x][y] != null;
 	}
-
+	//removes the highlight from a square (deselection)
 	public void clearHighlight() {
 		for (int x = 0 ; x < 8 ; x++) {
 			for (int y = 0 ; y < 8 ; y++) {
